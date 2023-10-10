@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+} /*propiedad de CSS que controla cómo se calculan las dimensiones totales de un elemento, incluyendo su contenido, relleno y bordes.*/
+html{
+    scroll-behavior: smooth; /*se utiliza para controlar el comportamiento del desplazamiento en una página web.*/
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}/*font-size establece el tamaño de fuente del elemento al que se aplica en 3.5 veces el tamaño de fuente predeterminado del elemento padre.*/
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{font-size: 1.25em;}
+
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}/*establece la fuente a utilizar para el texto en el cuerpo de la página y elimina cualquier margen alrededor del cuerpo,sin espacio en blanco alrededor*/
+
+
+button{
+    font-size: 1.5em;
+    font-weight: bold; /*Hace que el texto dentro del botón se muestre en negrita.*/
+    padding: 10px 20px;
+    border-radius: 10px; /*Aplica esquinas redondeadas al botón, con un radio de 10 píxeles.*/
+    border: 2px solid rgb(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+    color: black; /* Establece el color del texto dentro del botón como negro.*/
+    background-color: white; /* Establece el color de fondo del botón como blanco.*/
+}
+
+button:hover{
+    background-color: rgb(137, 78, 192);
+} /*cuando un usuario coloca el cursor sobre un botón, el color de fondo cambia a un tono de púrpura*/
+
+.container{
+    max-width: 1400px;
+    margin:auto
+}
+
+.color-acento{color: rgb(137, 78, 192);}
+
+header{
+    background-color: rgb(8, 8, 8);
+}
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+#hero h1{
+    font-size: 4.1em;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(241, 236, 236);
+}
+header a:hover{
+    color: blueviolet;
+}
+
+#hero{
+    display: flex;/*estos estilos crean un contenedor flexible que alinea sus elementos hijos en el centro tanto vertical como horizontalmente*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/021/252/697/non_2x/modern-cybersecurity-technology-background-with-padlock-vector.jpg");
+    background-repeat: no-repeat;/* Evita que la imagen de fondo se repita.*/
+    background-size: cover ;/*Hace que la imagen de fondo cubra todo el contenedor.*/
+    background-position: center center; /*Establece la posición de la imagen de fondo en el centro tanto horizontal como verticalmente.*/
+}
+
+
+#somos-proya .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nosotros{
+    background-color:rgb(3, 3, 3);
+    color: white;
+    text-align: center;
+}
+
+#nosotros .container h2{
+    color: rgb(137, 78, 192);
+    margin-top: 0;
+    font-size: 3.2em;
+}
+#nosotros .container{
+    padding: 100px ; 
+}
+
+#nosotross .container{
+    margin-top: 0%;
+}
+
+#nosotros .container p{
+    display: none;
+}
+
+#nosotros .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 100px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+    font-weight: 50%;
+   
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(fotoyo.jpg)
+
+   
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    )
+    ,url(foto-del-negro.jpg)
+
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+    
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(4, 4, 4);
+    color: white;
+    height: 80vh;
+}
+
+footer{
+    background-color: rgb(230,230, 230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100) ;
+
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+@media (min-width:720px){
+    header {
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+
+    }
+ 
+ #nosotros .programas{
+    display: flex;
+    justify-content: center;
+ }
+
+ 
+ #nosotros .carta{
+    padding: 80px;
+    box-shadow: 2px 2px 10px rgb(4, 4, 4,0.5);
+ }
+
+#caracteristicas .container{
+    text-align: initial;
+}
+#caracteristicas .container h2{
+    color: aliceblue;
+}
+
+
+}
